@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Decrement from "./Decrement";
+import Increment from "./Increment";
+import Reset from "./Reset";
 
-function App() {
+export default function App() {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Increment count={count + 1}></Increment>
+      <Decrement count={count - 1}></Decrement>
+      <Reset count={0}></Reset>
     </div>
   );
 }
-
-export default App;
