@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Reset(props) {
-  //const [count, setCount] = useState(props.count);
+export default function Reset({ reset }) {
   return (
     <div>
-      <button onClick={() => setCount(props.count)}>Reset</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }

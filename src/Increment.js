@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function Increment(props) {
-  //const [count, setCount] = useState(0);
+export default function Increment({ increment }) {
   return (
     <div>
-      <button onClick={() => setCount(props.count + 1)}>Increment</button>
-      {count}
+      <button onClick={increment}>Increment</button>
     </div>
   );
 }

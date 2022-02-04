@@ -1,10 +1,9 @@
 import React from "react";
 
-export default function Decrement(props) {
-  //const [count, setCount] = useState(props.count);
+export default function Decrement({ decrement }) {
   return (
     <div>
-      <button onClick={() => setCount(props.count)}>Decrement</button>
+      <button onClick={decrement}>Decrement</button>
     </div>
   );
 }
